@@ -9,8 +9,10 @@ const port = 3000;
 app.use(morgan('combined'));
 
 //Templet engine
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
+app.engine('.hbs', handlebars({
+        extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
 
 
@@ -19,7 +21,7 @@ app.set('views', path.join(__dirname, 'resource/views'));
             return res.send('Hello World!');
         }
 */
-app.get('/', (req, res) => {
-        res.render('home');
+app.get('/news', (req, res) => {
+        res.render('news');
 });
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
