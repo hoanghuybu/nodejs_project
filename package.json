@@ -1,0 +1,32 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoanghuybu/nodejs_project.git"
+  },
+  "keywords": [
+    "blog",
+    "nodejs",
+    "project",
+    "nodejs"
+  ],
+  "author": "hoanghuybu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoanghuybu/nodejs_project/issues"
+  },
+  "homepage": "https://github.com/hoanghuybu/nodejs_project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
