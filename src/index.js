@@ -4,6 +4,7 @@ const path = require('path')
 const handlebars = require('express-handlebars');
 const app = express();
 const port = 3000;
+const route = require('./route');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -17,16 +18,7 @@ app.engine('.hbs', handlebars({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
 
+route(app);
 
-/* hàm (req, res) => res.send('Hello World!') tương đương
-        function(req, res) {
-            return res.send('Hello World!');
-        }
-*/
-app.get('/news', (req, res) => {
-        res.render('news');
-});
-app.get('/', (req, res) => {
-        res.render('home');
-});
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
