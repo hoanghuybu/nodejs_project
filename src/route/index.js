@@ -2,7 +2,6 @@ const newsRouter = require('./news');
 const siteRouter = require('./site');
 
 function route(app) {
-
     /* hàm (req, res) => res.send('Hello World!') tương đương
         function(req, res) {
             return res.send('Hello World!');
@@ -17,10 +16,9 @@ function route(app) {
     //     res.render('home');
     // });
     app.use('/', siteRouter);
-    app.get('/search', (req, res) => {
-        res.render('search');
-    });
-
+    // app.get('/search', (req, res) => {
+    //     res.render('search');
+    // });
 }
 
 module.exports = route;
