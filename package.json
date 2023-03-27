@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resource/scss/style.scss --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "lint-staged"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -38,7 +37,7 @@
     "express-handlebars": "^4.0.4"
   },
   "devDependencies": {
-    "husky": "^7.0.0",
+    "husky": "^4.2.5",
     "lint-staged": "^11.0.0",
     "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
