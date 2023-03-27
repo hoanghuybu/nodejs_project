@@ -14,7 +14,7 @@ app.use(morgan('combined'));
 //Templet engine
 app.engine(
 
-    
+
     '.hbs',
 
     handlebars({
@@ -27,6 +27,6 @@ app.set('views', path.join(__dirname, 'resource/views'));
 // Routes init
 route(app);
 
-                    app.listen(port, () =>
-                        console.log(`Example app listening at http://localhost:${port}`),
+        app.listen(port, () =>
+                console.log(`Example app listening at http://localhost:${port}`),
                     );
