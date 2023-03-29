@@ -1,0 +1,24 @@
+<div class="mt-4">
+    <h3>Chỉnh sửa bài viết bài viết</h3>
+
+    <form class="mt-4" method="POST" action="/courses/{{courses._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="description" class="form-label">Mô tả</label>
+            <textarea class="form-control" id="description" name="description">{{courses.description}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Tên bài viết</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{courses.name}}">
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Hình ảnh</label>
+            <input type="text" class="form-control" id="img" name="img" value="{{courses.img}}">
+        </div>
+        <div class="mb-3">
+            <label for="videoId" class="form-label">ID Video</label>
+            <input type="text" class="form-control" id="videoId" name="videoId" value="{{courses.videoId}}">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Sửa bài viết</button>
+    </form>
+</div>

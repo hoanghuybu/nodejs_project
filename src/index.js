@@ -7,6 +7,10 @@ const app = express();
 const port = 3000;
 const route = require('./route');
 const db = require('./config/db');
+const methodOverride = require('method-override');
+
+//Config method
+app.use(methodOverride('_method'));
 
 //Connect to DB
 db.connect();
@@ -21,9 +25,11 @@ app.use(morgan('combined'));
 //Templet engine
 app.engine(
     '.hbs',
-
     handlebars({
         extname: '.hbs',
+        helpers: {
+            sum: (a, b) => a + b,
+        },
     }),
 );
 app.set('view engine', '.hbs');
